@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+/// operator overloading - polymorphism
+class demo{
+    int x; // private 
+    public:
+    void getData(){
+       cout<<"enter the data";
+       cin>>x;
+    }
+    void putData(){
+        cout<<x<<" ";
+    }
+    demo operator*(demo bb){
+        demo dd;
+        dd.x = x*bb.x;
+        return dd;
+    }
+    
+};
+int main()
+{
+    demo aa;
+    aa.getData();
+    aa.putData();
+    demo bb;
+    bb.getData();
+    bb.putData();
+    demo cc;
+    cc = aa*bb;
+    cc.putData();
+
+   
+
+    return 0;
+}
